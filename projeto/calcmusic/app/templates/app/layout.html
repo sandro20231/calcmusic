@@ -6,7 +6,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Calculadora Musical</title>
-    <link rel="stylesheet" href="{% static 'app/estilo.css%}">
+    <link rel="stylesheet" href="{% static 'app/estilo.css' %}">
 </head>
 
 <body>
@@ -14,6 +14,9 @@
         <h1>Calculadora musical</h1>
     </header>
     <nav>
+        <a href="{% url 'index' %}">Início</a>
+        <a href="{% url 'login' %}">Login</a>
+        <a href="{% url 'logout' %}">Logout</a>
         <!-- Links -->
     </nav>
     {% block body %}

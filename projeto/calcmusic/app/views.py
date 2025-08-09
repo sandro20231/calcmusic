@@ -3,6 +3,7 @@ from django.http import HttpResponseRedirect
 from django.urls import reverse
 from django.contrib.auth import authenticate, login, logout
 from django.contrib.auth.decorators import login_required
+from .models import Comentarios
 
 # Create your views here.
 
@@ -35,4 +36,15 @@ def logout_v(request):
 
 
 def calculadora(request):
-    return render(request, "app/calculadora.html")
+    comentarios = Comentarios.objects.all()
+    return render(request, "app/calculadora.html", {"comentarios":comentarios})
+
+
+def addComentarios(request):
+    if request.method == "POST":
+        titulo = request.POST['tituloComentario']
+        texto = request.POST['comentario']
+
+        registro = Comentarios(titulo=titulo, texto=texto, autor=request.user)
+        registro.save()
+        return HttpResponseRedirect(reverse('calculadora'))

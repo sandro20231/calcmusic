@@ -106,87 +106,225 @@ btncalcular.addEventListener('click', function (e) {
         c27.value = d3;
         c28.value = e3;
 
+        // criando os textos dos acordes 
+        // tríades
+        // criando os parágrafos:
+        var el1 = document.createElement('p');
+        var el2 = document.createElement('p');
+        var el3 = document.createElement('p');
+        var el4 = document.createElement('p');
+        var el5 = document.createElement('p');
+        var el6 = document.createElement('p');
+        var el7 = document.createElement('p');
+        // crianto os textos
+        var t1 = document.createTextNode("Tônica: " + t3);
+        var t2 = document.createTextNode("Supertônica: " + a3 + "m");
+        var t33 = document.createTextNode("Média: " + b3 + "m");
+        var t4 = document.createTextNode("Subdominante: " + c3)
+        var t5 = document.createTextNode("Domiante: " + d3);
+        var t6 = document.createTextNode("Relativa: " + e3 + "m");
+        var t7 = document.createTextNode("Sensível: " + f3 + "º");
+        // adicionando os textos aos elementos
+
+        el1.appendChild(t1);
+        el2.appendChild(t2);
+        el3.appendChild(t33);
+        el4.appendChild(t4);
+        el5.appendChild(t5);
+        el6.appendChild(t6);
+        el7.appendChild(t7);
+
+        // adicionando os elementos a lig
+
+        ac1.appendChild(el1);
+        ac1.appendChild(el2);
+        ac1.appendChild(el3);
+        ac1.appendChild(el4);
+        ac1.appendChild(el5);
+        ac1.appendChild(el6);
+        ac1.appendChild(el7);
+
+        // tétrades
+
+        // criando elementos:
+
+        var el8 = document.createElement('p');
+        var el9 = document.createElement('p');
+        var el10 = document.createElement('p');
+        var el11 = document.createElement('p');
+        var el12 = document.createElement('p');
+        var el13 = document.createElement('p');
+        var el14 = document.createElement('p');
+
+        // criando os textos:
+
+        var t8 = document.createTextNode("Tônica: " + t3 + "7+");
+        var t9 = document.createTextNode("Supertônica: " + a3 + "m" + "7");
+        var t10 = document.createTextNode("Média: " + b3 + "m" + "7");
+        var t11 = document.createTextNode("Subdominante: " + c3 + "7+")
+        var t12 = document.createTextNode("Domiante: " + d3 + "7");
+        var t13 = document.createTextNode("Relativa: " + e3 + "m" + "7");
+        var t14 = document.createTextNode("Sensível: " + f3 + "m7/b5");
+
+        // adicionando texto nos elementos:
+
+        el8.appendChild(t8);
+        el9.appendChild(t9);
+        el10.appendChild(t10);
+        el11.appendChild(t11);
+        el12.appendChild(t12);
+        el13.appendChild(t13);
+        el14.appendChild(t14);
+
+        // adicionando os elementos na ligação:
+
+        ac2.appendChild(el8);
+        ac2.appendChild(el9);
+        ac2.appendChild(el10);
+        ac2.appendChild(el11);
+        ac2.appendChild(el12);
+        ac2.appendChild(el13);
+        ac2.appendChild(el14);
+
+
+    }
+    if (escala.value === "escalaMenor") {
+
+        // calculando os intervalos da escala 
+        var t = numeroResultante;
+        var a = segundaMaior(numeroResultante);
+        var b = tercaMenor(numeroResultante);
+        var c = quartaJusta(numeroResultante);
+        var d = quintaJusta(numeroResultante);
+        var e2 = sextaMenor(numeroResultante);
+        var f = setimaMenor(numeroResultante);
+
+        // traduzindo em letras
+        var t3 = numeroLetra(t);
+        var a3 = numeroLetra(a);
+        var b3 = numeroLetra(b);
+        var c3 = numeroLetra(c);
+        var d3 = numeroLetra(d);
+        var e3 = numeroLetra(e2);
+        var f3 = numeroLetra(f);
+
+
+
+        c1.value = t3;
+        c2.value = a3;
+        c31.value = b3;
+        c4.value = c3;
+        c5.value = d3;
+        c6.value = e3;
+        c7.value = f3;
+
+        c8.value = b3;
+        c9.value = c3;
+        c10.value = d3;
+        c11.value = e3;
+        c12.value = f3;
+        c13.value = t3;
+        c14.value = a3;
+
+        c15.value = d3;
+        c16.value = e3;
+        c17.value = f3;
+        c18.value = t3;
+        c19.value = a3;
+        c20.value = b3;
+        c21.value = c3;
+
+        c22.value = f3;
+        c23.value = t3;
+        c24.value = a3;
+        c25.value = b3;
+        c26.value = c3;
+        c27.value = d3;
+        c28.value = e3;
+
+        // criando os textos dos acordes 
+        // tríades
+        // criando os parágrafos:
+        var el1 = document.createElement('p');
+        var el2 = document.createElement('p');
+        var el3 = document.createElement('p');
+        var el4 = document.createElement('p');
+        var el5 = document.createElement('p');
+        var el6 = document.createElement('p');
+        var el7 = document.createElement('p');
+        // crianto os textos
+        var t1 = document.createTextNode("Tônica: " + t3 + "m");
+        var t2 = document.createTextNode("Supertônica: " + a3 + "º");
+        var t33 = document.createTextNode("Média: " + b3);
+        var t4 = document.createTextNode("Subdominante: " + c3 + "m")
+        var t5 = document.createTextNode("Domiante: " + d3 + "m");
+        var t6 = document.createTextNode("Relativa: " + e3);
+        var t7 = document.createTextNode("Sensível: " + f3);
+        // adicionando os textos aos elementos
+
+        el1.appendChild(t1);
+        el2.appendChild(t2);
+        el3.appendChild(t33);
+        el4.appendChild(t4);
+        el5.appendChild(t5);
+        el6.appendChild(t6);
+        el7.appendChild(t7);
+
+        // adicionando os elementos a lig
+
+        ac1.appendChild(el1);
+        ac1.appendChild(el2);
+        ac1.appendChild(el3);
+        ac1.appendChild(el4);
+        ac1.appendChild(el5);
+        ac1.appendChild(el6);
+        ac1.appendChild(el7);
+
+        // tétrades
+
+        // criando elementos:
+
+        var el8 = document.createElement('p');
+        var el9 = document.createElement('p');
+        var el10 = document.createElement('p');
+        var el11 = document.createElement('p');
+        var el12 = document.createElement('p');
+        var el13 = document.createElement('p');
+        var el14 = document.createElement('p');
+
+        // criando os textos:
+
+        var t8 = document.createTextNode("Tônica: " + t3 + "m7");
+        var t9 = document.createTextNode("Supertônica: " + a3 + "m7/b5");
+        var t10 = document.createTextNode("Média: " + b3 + "7+");
+        var t11 = document.createTextNode("Subdominante: " + c3 + "m7")
+        var t12 = document.createTextNode("Domiante: " + d3 + "m7");
+        var t13 = document.createTextNode("Relativa: " + e3 + "7+");
+        var t14 = document.createTextNode("Sensível: " + f3 + "7");
+
+        // adicionando texto nos elementos:
+
+        el8.appendChild(t8);
+        el9.appendChild(t9);
+        el10.appendChild(t10);
+        el11.appendChild(t11);
+        el12.appendChild(t12);
+        el13.appendChild(t13);
+        el14.appendChild(t14);
+
+        // adicionando os elementos na ligação:
+
+        ac2.appendChild(el8);
+        ac2.appendChild(el9);
+        ac2.appendChild(el10);
+        ac2.appendChild(el11);
+        ac2.appendChild(el12);
+        ac2.appendChild(el13);
+        ac2.appendChild(el14);
+
+
     }
 
-    // criando os textos dos acordes 
-    // tríades
-    // criando os parágrafos:
-    var el1 = document.createElement('p');
-    var el2 = document.createElement('p');
-    var el3 = document.createElement('p');
-    var el4 = document.createElement('p');
-    var el5 = document.createElement('p');
-    var el6 = document.createElement('p');
-    var el7 = document.createElement('p');
-    // crianto os textos
-    var t1 = document.createTextNode("Tônica: " + t3);
-    var t2 = document.createTextNode("Supertônica: " + a3 + "m");
-    var t3 = document.createTextNode("Média: " + b3 + "m");
-    var t4 = document.createTextNode("Subdominante: " + c3)
-    var t5 = document.createTextNode("Domiante: " + d3);
-    var t6 = document.createTextNode("Relativa: " + e3 + "m");
-    var t7 = document.createTextNode("Sensível: " + f3 + "º");
-    // adicionando os textos aos elementos
-
-    el1.appendChild(t1);
-    el2.appendChild(t2);
-    el3.appendChild(t3);
-    el4.appendChild(t4);
-    el5.appendChild(t5);
-    el6.appendChild(t6);
-    el7.appendChild(t7);
-
-    // adicionando os elementos a lig
-
-    ac1.appendChild(el1);
-    ac1.appendChild(el2);
-    ac1.appendChild(el3);
-    ac1.appendChild(el4);
-    ac1.appendChild(el5);
-    ac1.appendChild(el6);
-    ac1.appendChild(el7);
-
-    // tétrades
-
-    // criando elementos:
-
-    var el8 = document.createElement('p');
-    var el9 = document.createElement('p');
-    var el10 = document.createElement('p');
-    var el11 = document.createElement('p');
-    var el12 = document.createElement('p');
-    var el13 = document.createElement('p');
-    var el14 = document.createElement('p');
-
-    // criando os textos:
-
-    var t8 = document.createTextNode("Tônica: " + t3 + "7+");
-    var t9 = document.createTextNode("Supertônica: " + a3 + "m" + "7");
-    var t10 = document.createTextNode("Média: " + b3 + "m" + "7");
-    var t11 = document.createTextNode("Subdominante: " + c3 + "7+")
-    var t12 = document.createTextNode("Domiante: " + d3 + "7");
-    var t13 = document.createTextNode("Relativa: " + e3 + "m" + "7");
-    var t14 = document.createTextNode("Sensível: " + f3 + "m7/b5");
-
-    // adicionando texto nos elementos:
-
-    el8.appendChild(t8);
-    el9.appendChild(t9);
-    el10.appendChild(t10);
-    el11.appendChild(t11);
-    el12.appendChild(t12);
-    el13.appendChild(t13);
-    el14.appendChild(t14);
-
-    // adicionando os elementos na ligação:
-
-    ac2.appendChild(el8);
-    ac2.appendChild(el9);
-    ac2.appendChild(el10);
-    ac2.appendChild(el11);
-    ac2.appendChild(el12);
-    ac2.appendChild(el13);
-    ac2.appendChild(el14);
 
 
 

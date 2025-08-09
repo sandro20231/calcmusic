@@ -1,0 +1,16 @@
+{% extends 'app/layout.html' %}
+{% block body %}
+<h2>Preencha os campos abaixo para calcular o campo harmônico:</h2>
+<form>
+    <label>Tonalidade:</label><br>
+    <input type="text" name="tonalidade"><br>
+    <select name="escala">
+        <option value="escalaMaior">Escala maior</option>
+        <option value="escalaMenor">Escala menor</option>
+    </select><br>
+    <button type="submit">Calcular</button>
+</form>
+<div class="lig">
+
+</div>
+{% endblock %}

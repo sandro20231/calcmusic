@@ -32,3 +32,7 @@ def login_v(request):
 def logout_v(request):
     logout(request)
     return render(request, "app/login.html", {"erro": "Usuário não logado"})
+
+
+def calculadora(request):
+    return render(request, "app/calculadora.html")

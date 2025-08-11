@@ -15,7 +15,7 @@ jobs:
 
       - name: Rodar testes
         run: |
-        cd projeto
-        cd calcmusic
+          cd projeto
+          cd calcmusic
 
-        python manage.py test
+          python manage.py test

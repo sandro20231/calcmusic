@@ -1,0 +1,13 @@
+name: Testing
+on: push
+
+jobs:
+  test_project:
+    runs-on: ubuntu-latest
+    steps:
+      -name: checkout github
+      uses: actions/checkout@v2
+    -name: instalar dependencias
+    run: |
+      pip install django
+      python manage.py test
